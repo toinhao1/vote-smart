@@ -1,0 +1,15 @@
+{
+	"name": "vote-smart",
+	"version": "1.0.0",
+	"description": "A package to easily work with the votemart api.",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"prepublish": "npm test"
+	},
+	"author": "Anthony Silveira",
+	"license": "MIT",
+	"dependencies": {
+		"axios": "^0.19.2"
+	}
+}
