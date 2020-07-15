@@ -4,6 +4,7 @@ const BallotMeasure = require('./lib/Ballot-Measure/index');
 const CandidateBio = require('./lib/CandidateBio/index');
 const Candidates = require('./lib/Candidates/index');
 const Committee = require('./lib/Committee/index');
+const District = require('./lib/District/index');
 
 module.exports = voteSmart = {
 	setApiKey,
@@ -12,4 +13,5 @@ module.exports = voteSmart = {
 	CandidateBio,
 	Candidates,
 	Committee,
+	District,
 };
