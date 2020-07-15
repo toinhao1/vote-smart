@@ -2,6 +2,12 @@
 	"name": "vote-smart",
 	"version": "1.0.0",
 	"description": "A package to easily work with the votemart api.",
+	"keywords": [
+		"votesmart",
+		"congress",
+		"political",
+		"politics"
+	],
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
@@ -11,5 +17,10 @@
 	"license": "MIT",
 	"dependencies": {
 		"axios": "^0.19.2"
-	}
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/toinhao1/vote-smart"
+	},
+	"readmeFilename": "README.md"
 }
