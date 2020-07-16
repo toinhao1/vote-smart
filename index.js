@@ -8,6 +8,7 @@ const District = require('./lib/District/index');
 const Election = require('./lib/Election/index');
 const Leadership = require('./lib/Leadership/index');
 const Local = require('./lib/Local/index');
+const Npat = require('./lib/Npat/index');
 
 module.exports = voteSmart = {
 	setApiKey,
@@ -20,4 +21,5 @@ module.exports = voteSmart = {
 	Election,
 	Leadership,
 	Local,
+	Npat,
 };
