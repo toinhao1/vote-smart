@@ -1,6 +1,6 @@
 {
 	"name": "project-vote-smart",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A package to easily work with the votemart api.",
 	"keywords": [
 		"votesmart",
