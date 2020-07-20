@@ -10,8 +10,7 @@
 	],
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"prepublish": "npm test"
+		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"author": "Anthony Silveira",
 	"license": "MIT",
