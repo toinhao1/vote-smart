@@ -1,12 +1,12 @@
-# A Wrapper For Project Vote Smart APi
+# A Wrapper For Project Vote Smart API
 
-A simple package which makes interacting with the Vote Smart api much easier.
+A simple package which makes interacting with the Vote Smart api trivial.
 
 Go to the Vote Smart documentation to understand how to best interact with their API: http://api.votesmart.org/docs/index.html
 
 # Examples
 
-importing
+Importing
 
 ```
 // specific methods
@@ -16,12 +16,11 @@ const { Votes } = require('vote-smart');
 const voteSmart = require('vote-smart');
 ```
 
-set your api key
+Set your api key
 
 ```
-const voteSmart = require('vote-smart');
+const { setApiKey } = require('vote-smart');
 
 // have to get API key from Vote Smart
-voteSmart.setApiKey(VOTE_SMART_API_KEY)
-
+setApiKey(VOTE_SMART_API_KEY)
 ```
