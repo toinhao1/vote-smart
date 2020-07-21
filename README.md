@@ -2,7 +2,7 @@
 
 A simple package which makes interacting with the Vote Smart api trivial.
 
-Go to the Vote Smart documentation to understand how to best interact with their API: http://api.votesmart.org/docs/index.html
+To view exactly what each method will output go to the Vote Smart documentation to understand how to best interact with their API: http://api.votesmart.org/docs/index.html
 
 # Examples
 
