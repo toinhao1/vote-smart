@@ -1,17 +1,17 @@
 # A Wrapper For Project Vote Smart API
 
-A simple package which makes interacting with the Vote Smart api trivial.
+A Node.js package which makes interacting with the Project Vote Smart API simple.
 
-To view exactly what each method will output go to the Vote Smart documentation to understand how to best interact with their API: http://api.votesmart.org/docs/index.html
+To view exactly what each method will output go to the Prject Vote Smart documentation to understand how to best interact with their API: http://api.votesmart.org/docs/index.html
 
 # Examples
 
 Set your api key
 
 ```
-const { setApiKey } = require('vote-smart');
+const { setApiKey } = require('project-vote-smart');
 
-// have to get API key from Vote Smart
+// have to get API key from Project Vote Smart
 setApiKey(VOTE_SMART_API_KEY)
 ```
 
@@ -19,12 +19,12 @@ Importing
 
 ```
 // specific methods
-const { Votes } = require('vote-smart');
+const { Votes } = require('project-vote-smart');
 
 Votes.getBill(billId)
 
 // entire package
-const voteSmart = require('vote-smart');
+const voteSmart = require('project-vote-smart');
 
 voteSmart.Votes.getBill(billid)
 ```
@@ -32,7 +32,7 @@ voteSmart.Votes.getBill(billid)
 Using with chaining
 
 ```
-const { Votes } = require('vote-smart');
+const { Votes } = require('project-vote-smart');
 
   Votes.getBill(billId)
     .then(response => {
@@ -48,7 +48,7 @@ const { Votes } = require('vote-smart');
 Using with async/await
 
 ```
-const { Votes } = require('vote-smart');
+const { Votes } = require('project-vote-smart');
 
 const getBillData = async (billId) => {
 
@@ -64,7 +64,7 @@ const getBillData = async (billId) => {
 Address
 
 ```
-const { Address } = require('vote-smart');
+const { Address } = require('project-vote-smart');
 
 Address.getCampaign(candidateId)
 Address.getCampaignWebAddress(candidateId)
