@@ -1,19 +1,18 @@
 const Address = require('../lib/Address');
 const setApiKey = require('../lib/setApiKey');
 var expect = require('chai').expect;
-
-var candidId = 15723;
-var electionId = 3916;
-var officeId = 1;
+const { candidId, officeId, electionId } = require('./data');
 
 describe('tests all methods from the address class', function () {
 	before(function () {
-		setApiKey('API KEY');
+		setApiKey('APIKEY');
 	});
 	describe('getCampaign method', function () {
 		it('returns data when providing correct params to getCampaign', async function () {
-			const response = await Address.getCampaign(candidId);
-			expect(response.address.office).length.to.be.greaterThan(0);
+			const {
+				address: { office },
+			} = await Address.getCampaign(candidId);
+			expect(office).length.to.be.greaterThan(0);
 		});
 		it('throws an error when no input is provided', async function () {
 			try {
@@ -25,8 +24,10 @@ describe('tests all methods from the address class', function () {
 	});
 	describe('getCampaignWebAddress method', function () {
 		it('returns data when providing correct params to getCampaignWebAddress', async function () {
-			const response = await Address.getCampaignWebAddress(candidId);
-			expect(response.webaddress.address).length.to.be.greaterThan(0);
+			const {
+				webaddress: { address },
+			} = await Address.getCampaignWebAddress(candidId);
+			expect(address).length.to.be.greaterThan(0);
 		});
 		it('throws an error when no input is provided', async function () {
 			try {
@@ -38,8 +39,10 @@ describe('tests all methods from the address class', function () {
 	});
 	describe('getCampaignByElection method', function () {
 		it('returns data when providing correct params to getCampaignByElection', async function () {
-			const response = await Address.getCampaignByElection(electionId);
-			expect(response.address.office).length.to.be.greaterThan(0);
+			const {
+				address: { office },
+			} = await Address.getCampaignByElection(electionId);
+			expect(office).length.to.be.greaterThan(0);
 		});
 		it('throws an error when no input is provided', async function () {
 			try {
@@ -51,8 +54,12 @@ describe('tests all methods from the address class', function () {
 	});
 	describe('getOffice method', function () {
 		it('returns data when providing correct param to getOffice', async function () {
-			const response = await Address.getOffice(candidId);
-			expect(response.address.office.address).to.haveOwnProperty('street');
+			const {
+				address: {
+					office: { address },
+				},
+			} = await Address.getOffice(candidId);
+			expect(address).to.haveOwnProperty('street');
 		});
 		it('throws an error when no input is provided', async function () {
 			try {
@@ -64,8 +71,10 @@ describe('tests all methods from the address class', function () {
 	});
 	describe('getOfficeWebAddress method', function () {
 		it('returns data when providing correct param to getOfficeWebAddress', async function () {
-			const response = await Address.getOfficeWebAddress(candidId);
-			expect(response.webaddress.address).length.to.be.greaterThan(0);
+			const {
+				webaddress: { address },
+			} = await Address.getOfficeWebAddress(candidId);
+			expect(address).length.to.be.greaterThan(0);
 		});
 		it('throws an error when no input is provided', async function () {
 			try {
@@ -77,8 +86,12 @@ describe('tests all methods from the address class', function () {
 	});
 	describe('getOfficeByOfficeState method', function () {
 		it('returns data when providing correct param to getOfficeByOfficeState', async function () {
-			const response = await Address.getOfficeByOfficeState(officeId);
-			expect(response.address.office.address).to.haveOwnProperty('street');
+			const {
+				address: {
+					office: { address },
+				},
+			} = await Address.getOfficeByOfficeState(officeId);
+			expect(address).to.haveOwnProperty('street');
 		});
 		it('throws an error when no input is provided', async function () {
 			try {
