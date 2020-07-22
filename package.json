@@ -10,12 +10,17 @@
 	],
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "mocha --timeout 10000"
 	},
 	"author": "Anthony Silveira",
 	"license": "MIT",
 	"dependencies": {
 		"axios": "^0.19.2"
+	},
+	"devDependencies": {
+		"chai": "*",
+		"mocha": "*",
+		"chai-as-promised": "*"
 	},
 	"repository": {
 		"type": "git",
