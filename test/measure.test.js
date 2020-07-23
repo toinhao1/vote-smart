@@ -1,11 +1,12 @@
 const Measure = require('../lib/Ballot-Measure');
+require('dotenv').config();
 const setApiKey = require('../lib/setApiKey');
 var expect = require('chai').expect;
 const { year, stateId } = require('./data');
 
 describe('tests all methods from the Measure class', function () {
 	before(function () {
-		setApiKey('APIKEY');
+		setApiKey(process.env.VOTE_SMART_API_KEY);
 	});
 	describe('getMeasureByYearState method', function () {
 		it('should return correct value with both params provided', async function () {

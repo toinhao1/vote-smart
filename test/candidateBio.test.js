@@ -1,11 +1,12 @@
 const CandidateBio = require('../lib/CandidateBio');
+require('dotenv').config();
 const setApiKey = require('../lib/setApiKey');
 var expect = require('chai').expect;
 const { candidId } = require('./data');
 
 describe('all methods for the CandidateBio class', function () {
 	before(function () {
-		setApiKey('APIKEY');
+		setApiKey(process.env.VOTE_SMART_API_KEY);
 	});
 	describe('getBio methods', function () {
 		it('should return a candidates bio with correct param provided', async function () {
