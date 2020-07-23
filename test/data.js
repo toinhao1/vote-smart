@@ -4,4 +4,6 @@ module.exports = {
 	officeId: 1,
 	year: 2020,
 	stateId: 'TX',
+	officeTypeId: 'P',
+	candidateLastName: 'Trump',
 };

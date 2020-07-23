@@ -36,7 +36,7 @@ const { Votes } = require('project-vote-smart');
 
   Votes.getBill(billId)
     .then(response => {
-      return response.data
+      return response
 
   }).catch(error => {
       console.log(err)
@@ -54,7 +54,7 @@ const getBillData = async (billId) => {
 
   const response = await Votes.getBill(billId)
 
-  return response.data
+  return response
 }
 
 ```
