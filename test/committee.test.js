@@ -5,7 +5,7 @@ const { stateId, committeetypeId, committeeId } = require('./data');
 
 describe('all methods for Committee class', function () {
 	before(function () {
-		setApiKey('336dd981c029c5ead9c83d65c66e6896');
+		setApiKey('APIKEY');
 	});
 
 	describe('getTypes method', function () {
