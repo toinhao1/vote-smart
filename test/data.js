@@ -10,4 +10,6 @@ module.exports = {
 	districtId: 26848,
 	zip5: 78717,
 	zip4: 5092,
+	committeetypeId: 'H',
+	committeeId: 9882,
 };
