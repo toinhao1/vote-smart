@@ -1,4 +1,5 @@
 const Candidates = require('../lib/Candidates');
+require('dotenv').config();
 const setApiKey = require('../lib/setApiKey');
 var expect = require('chai').expect;
 const {
@@ -16,7 +17,7 @@ const {
 
 describe('all methods for the Candidates class', function () {
 	before(function () {
-		setApiKey('APIKEY');
+		setApiKey(process.env.VOTE_SMART_API_KEY);
 	});
 	describe('getByOfficeState method', function () {
 		it('should return a valid array of canddiates when providing correct params.', async function () {

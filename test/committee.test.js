@@ -1,11 +1,12 @@
 const Committee = require('../lib/Committee');
+require('dotenv').config();
 const setApiKey = require('../lib/setApiKey');
 var expect = require('chai').expect;
 const { stateId, committeetypeId, committeeId } = require('./data');
 
 describe('all methods for Committee class', function () {
 	before(function () {
-		setApiKey('APIKEY');
+		setApiKey(process.env.VOTE_SMART_API_KEY);
 	});
 
 	describe('getTypes method', function () {

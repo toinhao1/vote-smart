@@ -19,8 +19,9 @@
 	},
 	"devDependencies": {
 		"chai": "*",
-		"mocha": "*",
-		"chai-as-promised": "*"
+		"chai-as-promised": "*",
+		"dotenv": "^8.2.0",
+		"mocha": "*"
 	},
 	"repository": {
 		"type": "git",

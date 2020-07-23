@@ -1,11 +1,12 @@
 const Address = require('../lib/Address');
+require('dotenv').config();
 const setApiKey = require('../lib/setApiKey');
 var expect = require('chai').expect;
 const { candidId, officeId, electionId } = require('./data');
 
 describe('tests all methods from the address class', function () {
 	before(function () {
-		setApiKey('APIKEY');
+		setApiKey(process.env.VOTE_SMART_API_KEY);
 	});
 	describe('getCampaign method', function () {
 		it('returns data when providing correct params to getCampaign', async function () {
