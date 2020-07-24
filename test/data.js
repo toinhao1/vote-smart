@@ -12,4 +12,5 @@ module.exports = {
 	zip4: 5092,
 	committeetypeId: 'H',
 	committeeId: 9882,
+	party: 'Democrat',
 };
