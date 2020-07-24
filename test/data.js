@@ -15,4 +15,5 @@ module.exports = {
 	party: 'Democrat',
 	leadershipId: '141',
 	localId: '1083',
+	officeLevelId: 'F',
 };
