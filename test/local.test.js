@@ -4,7 +4,7 @@ const setApiKey = require('../lib/setApiKey');
 var expect = require('chai').expect;
 const { stateId, localId } = require('./data');
 
-describe('all methods for the Leadership class', function () {
+describe('all methods for the Local class', function () {
 	before(function () {
 		setApiKey(process.env.VOTE_SMART_API_KEY);
 	});

@@ -12,7 +12,7 @@ const {
 	party,
 } = require('./data');
 
-describe('all methods for Election class', function () {
+describe('all methods for Election class.', function () {
 	before(function () {
 		setApiKey(process.env.VOTE_SMART_API_KEY);
 	});

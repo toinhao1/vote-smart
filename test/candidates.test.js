@@ -15,7 +15,7 @@ const {
 	zip4,
 } = require('./data');
 
-describe('all methods for the Candidates class', function () {
+describe('all methods for the Candidates class.', function () {
 	before(function () {
 		setApiKey(process.env.VOTE_SMART_API_KEY);
 	});
@@ -166,28 +166,28 @@ describe('all methods for the Candidates class', function () {
 		});
 	});
 	describe('getByDistrict method', function () {
-		it('should retun an array with candidates', async function () {
+		it('should retun an array with candidates.', async function () {
 			const {
 				candidateList: { candidate },
 			} = await Candidates.getByDistrict(districtId, year, stageId);
 			expect(candidate).to.not.be.null;
 			expect(candidate).to.be.an('array');
 		});
-		it('should retun an array with candidates, only required param', async function () {
+		it('should retun an array with candidates, only required param.', async function () {
 			const {
 				candidateList: { candidate },
 			} = await Candidates.getByDistrict(districtId);
 			expect(candidate).to.not.be.null;
 			expect(candidate).to.be.an('array');
 		});
-		it('should throw an error without required param', async function () {
+		it('should throw an error without required param.', async function () {
 			try {
 				await Candidates.getByDistrict('', year, stageId);
 			} catch (err) {
 				expect(err).to.not.be.null;
 			}
 		});
-		it('should throw an error without any params', async function () {
+		it('should throw an error without any params.', async function () {
 			try {
 				await Candidates.getByDistrict();
 			} catch (err) {
