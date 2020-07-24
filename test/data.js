@@ -13,4 +13,5 @@ module.exports = {
 	committeetypeId: 'H',
 	committeeId: 9882,
 	party: 'Democrat',
+	leadershipId: '141',
 };
