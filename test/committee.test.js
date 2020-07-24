@@ -4,13 +4,13 @@ const setApiKey = require('../lib/setApiKey');
 var expect = require('chai').expect;
 const { stateId, committeetypeId, committeeId } = require('./data');
 
-describe('all methods for Committee class', function () {
+describe('all methods for the Committee class.', function () {
 	before(function () {
 		setApiKey(process.env.VOTE_SMART_API_KEY);
 	});
 
 	describe('getTypes method', function () {
-		it('should return an array of committee types', async function () {
+		it('should return an array of committee types.', async function () {
 			const {
 				committeeTypes: { type },
 			} = await Committee.getTypes();
@@ -20,7 +20,7 @@ describe('all methods for Committee class', function () {
 		});
 	});
 	describe('getCommitteesByTypeState method', function () {
-		it('should return an array of committees', async function () {
+		it('should return an array of committees.', async function () {
 			const {
 				committees: { committee },
 			} = await Committee.getCommitteesByTypeState(committeetypeId, stateId);
@@ -29,14 +29,14 @@ describe('all methods for Committee class', function () {
 			expect(committee).to.be.an('array');
 			expect(committee).length.to.be.greaterThan(1);
 		});
-		it('should throw an error when typeId is not provided', async function () {
+		it('should throw an error when typeId is not provided.', async function () {
 			try {
 				await Committee.getCommitteesByTypeState('', stateId);
 			} catch (err) {
 				expect(err).to.not.be.null;
 			}
 		});
-		it('should throw an error when no params provided', async function () {
+		it('should throw an error when no params provided.', async function () {
 			try {
 				await Committee.getCommitteesByTypeState();
 			} catch (err) {
@@ -69,7 +69,7 @@ describe('all methods for Committee class', function () {
 			expect(member).to.not.be.null;
 			expect(member).to.be.an('array');
 		});
-		it('should throw an error when no param is provided', async function () {
+		it('should throw an error when no param is provided.', async function () {
 			try {
 				await Committee.getCommitteeMembers();
 			} catch (err) {

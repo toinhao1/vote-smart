@@ -4,16 +4,16 @@ const setApiKey = require('../lib/setApiKey');
 var expect = require('chai').expect;
 const { candidId } = require('./data');
 
-describe('all methods for the CandidateBio class', function () {
+describe('all methods for the CandidateBio class.', function () {
 	before(function () {
 		setApiKey(process.env.VOTE_SMART_API_KEY);
 	});
 	describe('getBio methods', function () {
-		it('should return a candidates bio with correct param provided', async function () {
+		it('should return a candidates bio with correct param provided.', async function () {
 			const { bio } = await CandidateBio.getBio(candidId);
 			expect(bio).to.be.an('object');
 		});
-		it('should thorw an error with no param provided', async function () {
+		it('should thorw an error with no param provided.', async function () {
 			try {
 				await CandidateBio.getBio();
 			} catch (err) {
@@ -22,11 +22,11 @@ describe('all methods for the CandidateBio class', function () {
 		});
 	});
 	describe('getDetailedBio methods', function () {
-		it('should return a candidates bio with correct param provided', async function () {
+		it('should return a candidates bio with correct param provided.', async function () {
 			const { bio } = await CandidateBio.getDetailedBio(candidId);
 			expect(bio).to.be.an('object');
 		});
-		it('should thorw an error with no param provided', async function () {
+		it('should thorw an error with no param provided.', async function () {
 			try {
 				await CandidateBio.getDetailedBio();
 			} catch (err) {
@@ -35,7 +35,7 @@ describe('all methods for the CandidateBio class', function () {
 		});
 	});
 	describe('getAddlBio methods', function () {
-		it('should return a candidates bio with correct param provided', async function () {
+		it('should return a candidates bio with correct param provided.', async function () {
 			const {
 				addlBio: {
 					additional: { item },
@@ -43,7 +43,7 @@ describe('all methods for the CandidateBio class', function () {
 			} = await CandidateBio.getAddlBio(candidId);
 			expect(item).to.be.an('array');
 		});
-		it('should thorw an error with no param provided', async function () {
+		it('should thorw an error with no param provided.', async function () {
 			try {
 				await CandidateBio.getAddlBio();
 			} catch (err) {
