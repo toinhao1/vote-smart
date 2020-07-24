@@ -14,4 +14,5 @@ module.exports = {
 	committeeId: 9882,
 	party: 'Democrat',
 	leadershipId: '141',
+	localId: '1083',
 };
