@@ -1,5 +1,6 @@
 module.exports = {
 	candidId: 15723,
+	categoryId: 30,
 	electionId: 3916,
 	officeId: 1,
 	stageId: 'G',
@@ -13,7 +14,9 @@ module.exports = {
 	committeetypeId: 'H',
 	committeeId: 9882,
 	party: 'Democrat',
+	sigId: '1547',
 	leadershipId: '141',
 	localId: '1083',
 	officeLevelId: 'F',
+	ratingId: '11772',
 };
