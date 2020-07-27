@@ -10,7 +10,6 @@ describe('all methods for the NPAT class.', function () {
 	});
 	it('return an npat for a specific candidate.', async function () {
 		const { npat } = await Npat.getNpat(candidId);
-		console.log(npat);
 		expect(npat).to.not.be.null;
 		expect(npat).to.be.an('object');
 	});
