@@ -1,6 +1,6 @@
 {
 	"name": "project-vote-smart",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"description": "A complete wrapper for the Project Vote Smart API",
 	"keywords": [
 		"votesmart",
